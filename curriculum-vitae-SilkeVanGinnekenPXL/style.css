@@ -1,23 +1,19 @@
 * {
     font-family: Arial, sans-serif;
+    color: #eee7d2;
 }
 
 body{
     background-color: black;
 }
 
-main {
-    color: #eee7d2;
-
-}
-
-img{
+img[alt="Profiel"]{
     width: 200px;
     border-radius: 15px;
     transition: all 0.3s ease;
 }
 
-img:hover {
+img[alt="Profiel"]:hover {
     width: 250px;
     box-shadow: #eee7d2 10px 10px 10px;
 
@@ -64,3 +60,10 @@ h2 {
     background-color: #645d53;
     width: 500px;
 }
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
