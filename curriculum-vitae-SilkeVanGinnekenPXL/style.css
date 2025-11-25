@@ -1,10 +1,14 @@
 * {
     font-family: Arial, sans-serif;
-    background-color: #141414;
+}
+
+body{
+    background-color: black;
 }
 
 main {
     color: #eee7d2;
+
 }
 
 img{
@@ -16,5 +20,34 @@ img{
 img:hover {
     width: 250px;
     box-shadow: #eee7d2 10px 10px 10px;
+
+}
+
+#Taalkennis {
+    width: 500px;
+    border-collapse: collapse;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#Taalkennis th, #Taalkennis td {
+    padding: 8px 12px;
+
+}
+
+#Taalkennis th {
+    background-color: #202020;
+    font-weight: bold;
+
+}
+
+#Taalkennis tr:nth-child(even) {
+    background-color: #4a4a4b;
+    color: #eee7d2;
+
+}
+#Taalkennis tr:nth-child(odd) {
+    background-color: #595858;
+    color: #eee7d2;
 
 }
