@@ -32,22 +32,35 @@ img:hover {
 
 #Taalkennis th, #Taalkennis td {
     padding: 8px 12px;
-
 }
 
 #Taalkennis th {
     background-color: #202020;
     font-weight: bold;
-
 }
 
 #Taalkennis tr:nth-child(even) {
     background-color: #4a4a4b;
     color: #eee7d2;
-
 }
 #Taalkennis tr:nth-child(odd) {
     background-color: #595858;
     color: #eee7d2;
+}
 
+h2 {
+   font-size: 25px;
+}
+
+#Bedrijfsinformatie {
+    list-style-type: square ;
+}
+
+#Werkervaring {
+    margin-top: 20px;
+    padding: 10px;
+    border: 5px solid #645d53;
+    border-radius: 10px;
+    background-color: #645d53;
+    width: 500px;
 }
