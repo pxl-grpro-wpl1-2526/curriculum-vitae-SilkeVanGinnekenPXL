@@ -1,69 +1,411 @@
 * {
-    font-family: Arial, sans-serif;
-    color: #eee7d2;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
 }
 
-body{
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
     background-color: black;
+    color: #eeeeee;
+    line-height: 1.7;
+    animation: fadePage 0.3s ease-in-out forwards;
 }
 
-img[alt="Profiel"]{
-    width: 200px;
-    border-radius: 15px;
-    transition: all 0.3s ease;
+/*zorg ervoor als de pagina geladen wordt dat die met een fade tevoorschijn komt*/
+@keyframes fadePage {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-img[alt="Profiel"]:hover {
-    width: 250px;
-    box-shadow: #eee7d2 10px 10px 10px;
-
+/*navigatiebalk*/
+.nav-header {
+    width: 100%;
+    background-color: #3c352f;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
-#Taalkennis {
-    width: 500px;
-    border-collapse: collapse;
-    margin-top: 10px;
-    text-align: center;
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#Taalkennis th, #Taalkennis td {
-    padding: 8px 12px;
+.logo {
+    color: #ffecb7;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-#Taalkennis th {
-    background-color: #202020;
-    font-weight: bold;
+.navbar a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: 0.3s;
+    position: relative;
 }
 
-#Taalkennis tr:nth-child(even) {
-    background-color: #4a4a4b;
-    color: #eee7d2;
+.navbar a:hover {
+    color: #ffecb7;
 }
-#Taalkennis tr:nth-child(odd) {
-    background-color: #595858;
-    color: #eee7d2;
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #FFECB7FF;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/*algemene layout*/
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 120px 20px 40px;
 }
 
 h2 {
-   font-size: 25px;
+    color: #ffecb7;
+    font-size: 1.9rem;
+    margin-bottom: 25px;
 }
 
-#Bedrijfsinformatie {
-    list-style-type: square ;
+h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background-color: #e8ddc7;
+    display: block;
+    margin-top: 8px;
+    border-radius: 2px;
 }
 
-#Werkervaring {
-    margin-top: 20px;
-    padding: 10px;
-    border: 5px solid #645d53;
-    border-radius: 10px;
-    background-color: #645d53;
-    width: 500px;
+/*sections*/
+.section {
+    background-color: #1a1a1a;
+    padding: 45px;
+    margin: 80px auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
 }
 
-.footer {
+.section:nth-child(even) {
+    border-left: 7px solid #ffecb7;
+}
+
+.section:nth-child(odd) {
+    border-right: 7px solid #ffecb7;
+}
+
+/*intro*/
+.intro-section {
+    margin-top: 40px;
+}
+
+.intro-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.intro-container img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.6);
+}
+
+.intro-container img:hover {
+    transform: scale(1.05);
+    box-shadow: #ffecb7 0 0 40px;
+}
+
+.intro-container h1 {
+    font-size: 2.6rem;
+}
+
+.intro-container h1 span {
+    color: #ffecb7;
+}
+
+.intro-container p {
+    color: #cccccc;
+    max-width: 600px;
+}
+
+/*opleidingen*/
+.opleiding {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
 }
 
+.opleiding li {
+    list-style: none;
+    color: #cccccc;
+}
+
+.opleiding li:first-child {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/*vaardigheden*/
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.skill-card {
+    perspective: 1000px;
+}
+
+.skill-inner {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.skill-card:hover .skill-inner {
+    transform: rotateY(180deg);
+}
+
+.skill-front,
+.skill-back {
+    position: absolute;
+    inset: 0;
+    border-radius: 20%;
+    background-color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    font-weight: 600;
+    color: #cccccc;
+}
+
+.skill-back {
+    transform: rotateY(180deg);
+    font-size: 0.85rem;
+    color: #cccccc;
+    box-shadow: 0 10px 35px #ffecb7;
+}
+
+.sociale {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    justify-items: center;
+}
+
+.sociale li {
+    background-color: #262626;
+    padding: 15px 20px;
+    border-radius: 15px;
+    list-style: none;
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*Taaltabel*/
+.Taaltabel {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.Taaltabel th {
+    padding: 15px;
+    text-align: left;
+    background-color: #262626;
+    color: #ffecb7;
+}
+
+.Taaltabel td {
+    padding: 15px;
+    border-bottom: 1px solid #333;
+    color: #cccccc;
+}
+
+.Taaltabel tr:nth-child(odd) {
+    background-color: #3b3b3b;
+}
+
+/*Werkervaring*/
+.werk {
+    background-color: #262626;
+    padding: 25px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+}
+
+.werk h3 {
+    margin: 0;
+}
+
+.periode {
+    font-size: 0.9rem;
+    color: #aaaaaa;
+}
+
+.taken li {
+    color: #cccccc;
+    margin-left: 20px;
+}
+
+/*hobby's*/
+.hobbys-container {
+    position: relative;
+    display: flex;
+    gap: 15px;
+}
+
+.hobby {
+    background-color: #2a2a2a;
+    padding: 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.hobby:hover {
+    background-color: #ffecb7;
+    color: black;
+}
+.hobby-img {
+    position: absolute;
+    right: 200px;
+    top: -130px;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+.hobby:hover ~ .hobby-img {
+    opacity: 1;
+}
+
+.hobby[data-img="images/badminton.jpg"]:hover ~ .hobby-img {
+    background-image: url("images/badminton.jpg");
+}
+
+.hobby[data-img="images/gamen.webp"]:hover ~ .hobby-img {
+    background-image: url("images/gamen.webp");
+}
+
+.hobby[data-img="images/darts.jpeg"]:hover ~ .hobby-img {
+    background-image: url("images/darts.jpeg");
+}
+
+/*Projecten*/
+.projects-container {
+    display: flex;
+    gap: 15px;
+}
+
+.project {
+    background-color: #2a2a2a;
+    padding: 12px 20px;
+    border-radius: 30px;
+}
+
+.project:hover {
+    background-color: #ffecb7;
+}
+
+/*Contact*/
+.contact-line {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 12px 0;
+    color: #d4d4d4;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-line:not(:last-child) {
+    margin-bottom: 6px;
+}
+
+.contact-line:hover {
+    color: #ffffff;
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #9ca3af;
+    flex-shrink: 0;
+}
+
+.contact-line:hover .icon {
+    color: #e5e7eb;
+}
+
+/*footer*/
+.footer {
+    padding: 30px;
+    background-color: #3c352f;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.scroll-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 3000;
+}
+
+.scroll-top img {
+    width: 50px;
+    height: 50px;
+    opacity: 0.75;
+}
+
+.scroll-top img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
