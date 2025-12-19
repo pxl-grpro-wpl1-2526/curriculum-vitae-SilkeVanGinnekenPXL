@@ -2,130 +2,234 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Van Ginneken Silke</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-    <nav class="navbar">
-        <a href="#Introductie">Introductie</a>
-        <a href="#Profiel">Profiel</a>
-        <a href="#Opleidingen">Opleidingen</a>
-        <a href="#Vaardigheden">Vaardigheden</a>
-        <a href="#Taalkennis">Taalkennis</a>
-        <a href="#Werkervaring">Werkervaringen</a>
-        <a href="#Hobby's">Hobby's</a>
-        <a href="#Projecten">Projecten</a>
-    </nav>
+<div id="top"></div>
+<div id="over_mij"></div>
+<header class="nav-header">
+    <div class="nav-container">
+        <div class="logo">Silke Van Ginneken</div>
+        <nav class="navbar">
+            <a href="#over_mij">Over mij</a>
+            <a href="#Opleidingen">Opleidingen</a>
+            <a href="#Vaardigheden">Vaardigheden</a>
+            <a href="#Taalkennis">Taalkennis</a>
+            <a href="#Werkervaring">Werkervaringen</a>
+            <a href="#Hobby's">Hobby's</a>
+            <a href="#Projecten">Projecten</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+    </div>
 </header>
 
 <main>
-    <div id="top"></div>
-    <h1>Van Ginneken Silke</h1>
-
-    <section id = "Introductie">
-        <p>Ik ben een nieuwsgierig en creatief persoon die graag nieuwe dingen ontdekt en uitdagingen aangaat.
-            Ik waardeer flexibiliteit en probeer altijd een positieve bijdrage te leveren aan de omgeving om me heen.
-            Buiten school of werk geniet ik van gamen, badminton en gitaar spelen, wat mijn energie en motivatie versterkt.</p>
-    </section>
-
-    <section id = "Profiel">
+    <!--introductie en foto met link naar linkedin-->
+<section class="intro-section">
+    <div class="intro-container">
         <a href="https://www.linkedin.com/in/silke-van-ginneken/" target="_blank">
-            <img src="images/Profiel.png" alt="Profiel"/>
-        </a>
+            <img src="images/Profiel.png" alt="ProfielFoto"/></a>
+    </div>
+    <div>
+        <h1>Hallo, ik ben <span>Silke Van Ginneken</span></h1>
+        <p>
+            Ik ben een nieuwsgierig en creatief persoon die graag nieuwe dingen ontdekt en uitdagingen aangaat.
+            Ik waardeer flexibiliteit en probeer altijd een positieve bijdrage te leveren aan de omgeving om me heen.
+            Buiten school of werk geniet ik van gamen, badminton en gitaar spelen, wat mijn energie en motivatie versterkt.
+        </p>
+    </div>
+    <div id="Opleidingen"></div>
+</section>
 
-    </section>
-
-    <section id = "Opleidingen">
+    <!--opleidingen-->
+    <section class="section">
         <h2>Opleidingen</h2>
-        <ul>
+        <ul class ="opleiding item">
             <li>Lager Onderwijs</li>
+            <li>2011 - 2017</li>
+            <li>Algemeen</li>
+        </ul>
+        <ul class ="opleiding item">
             <li>Middelbaar Onderwijs</li>
+            <li>2017 - 2025</li>
+            <li>Economie - Moderne Talen</li>
         </ul>
+        <ul class ="opleiding item">
+            <li>Hogeschool</li>
+            <li>2025 - Heden</li>
+            <li>Graduaat Programmeren</li>
+        </ul>
+        <div id="Vaardigheden"></div>
     </section>
 
-    <section id = "Vaardigheden">
-        <h2>Technische vaardigheden</h2>
-        <ul>
-            <li>C#</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>SQL</li>
-        </ul>
-        <h2>Sociale vaardigheden</h2>
-        <ul>
-            <li>Actief luisteren</li>
-            <li>Respectvolle omgang met collega's en klanten</li>
-            <li>Flexibel inspelen op anderen</li>
-            <li>Professioneel omgaan met feedback</li>
-        </ul>
+    <!--Tecnische en sociale skills-->
+<section class="section">
+    <div class="skills-grid">
+    <div class="skill-card">
+        <div class="skill-inner">
+            <div class="skill-front">HTML</div>
+            <div class="skill-back">Structuur & semantiek</div>
+        </div>
+    </div>
+
+    <div class="skill-card">
+        <div class="skill-inner">
+            <div class="skill-front">CSS</div>
+            <div class="skill-back">Styling & layout</div>
+        </div>
+    </div>
+
+    <div class="skill-card">
+        <div class="skill-inner">
+            <div class="skill-front">SQL</div>
+            <div class="skill-back">Databases</div>
+        </div>
+    </div>
+
+    <div class="skill-card">
+        <div class="skill-inner">
+            <div class="skill-front">C#</div>
+            <div class="skill-back">Console-apps & WPF-apps</div>
+        </div>
+    </div>
+
+    <div class="skill-card">
+        <div class="skill-inner">
+            <div class="skill-front">GIT</div>
+            <div class="skill-back">Versiebeheer</div>
+        </div>
+    </div>
+    </div>
+
+    <h2>Sociale vaardigheden</h2>
+    <ul class ="sociale">
+        <li>Teamwork</li>
+        <li>Actief luisteren</li>
+        <li>Respectvolle omgang met collega's en klanten</li>
+        <li>Flexibel inspelen op anderen</li>
+        <li>Professioneel omgaan met feedback</li>
+    </ul>
+    <div id="Taalkennis"></div>
+</section>
+
+    <!--Taaltabel-->
+    <section  class="section">
+        <h2>Taalkennis</h2>
+        <table class="Taaltabel">
+            <thead>
+            <tr>
+                <th>Taal</th>
+                <th>Niveau</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Nederlands</td>
+                <td>Moedertaal</td>
+            </tr>
+            <tr>
+                <td>Engels</td>
+                <td>Vloeiend</td>
+            </tr>
+            <tr>
+                <td>Frans</td>
+                <td>Basis</td>
+            </tr>
+            <tr>
+                <td>Duits</td>
+                <td>Basis</td>
+            </tr>
+            </tbody>
+            </table>
+        <div id="Werkervaring"></div>
     </section>
 
-<section>
-    <h2>Taalkennis</h2>
-    <table id = "Taalkennis">
-        <thead>
-        <tr>
-            <th>Taal</th>
-            <th>Niveau</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Nederlands</td>
-            <td>Moedertaal</td>
-        </tr>
-        <tr>
-            <td>Engels</td>
-            <td>Vloeiend</td>
-        </tr>
-        <tr>
-            <td>Frans</td>
-            <td>Basis</td>
-        </tr>
-        <tr>
-            <td>Duits</td>
-            <td>Basis</td>
-        </tr>
-        </tbody>
-    </table>
-    </section>
-
-    <section id = "Werkervaring">
+    <!--Werkervaring-->
+    <section  class="section">
         <h2>Werkervaring</h2>
-        <ul id = "Bedrijfsinformatie">
-            <li>Bedrijf: HUBO Houthalen</li>
-            <li>Periode: Begin augustus 2025 - eerste week september 2025</li>
-            <li>Functie: Kassierster/Verkoopster</li>
-            <li>Taken:</li>
-            <ul id = "Opsomming">
+        <div class="werk">
+            <h3>Hubo Houthalen</h3>
+            <span class="periode"> Begin augustus 2025 - eerste week september 2025</span>
+            <ul class="taken">
                 <li>Rekken vullen</li>
                 <li>Winkel ordenen</li>
                 <li>Klanten gericht helpen</li>
                 <li>Kassa bedienen</li>
             </ul>
-        </ul>
+        </div>
+        <div class="werk">
+            <h3>Buurtslagers Helchteren</h3>
+            <span class="periode">2023 - 2024</span>
+            <ul class="taken">
+                <li>Broodjes maken</li>
+                <li>Salades maken</li>
+                <li>Werkplaats schoon houden</li>
+                <li>Vlees verdelen en verpakken</li>
+            </ul>
+        </div>
+        <div id="Hobby's"></div>
     </section>
 
-    <section id = "Hobby's">
+    <!--hobby's-->
+    <section class="section">
         <h2>Hobby's</h2>
-        <ul>
-            <li>Badminton</li>
-            <li>Gamen</li>
-            <li>Gitaar spelen</li>
-        </ul>
+        <div class="hobbys-container">
+            <span class="hobby">Badminton</span>
+            <span class="hobby">Gamen</span>
+            <span class="hobby">Darten</span>
+            <div class="hobby-img"></div>
+        </div>
+        <div class ="hobbys">
+            <img src="images/badminton.jpg" alt="badminton"/>
+            <img src="images/darts.jpeg" alt="darts"/>
+            <img src="images/gamen.webp" alt="gamen"/>
+        </div>
+        <div id="Projecten"></div>
     </section>
 
-    <section id = "Projecten">
+    <!--Projecten-->
+    <section class="section">
         <h2>Projecten</h2>
-        <p>Ontwikkelen van verschillende kleine console-applicaties</p>
+        <div class="projects-container">
+            <div class="project">Ontwikkelen van kleine console-applicaties in c#.</div>
+            <div class="project">Ontwikkelen van kleine websites met HTML en CSS.</div>
+
+        </div>
+        <div id="Contact"></div>
+    </section>
+
+    <!--Contact-->
+    <section class="section">
+        <h2>Contact</h2>
+
+        <a class="contact-line" href="mailto:silkevanginneken7@gmail.com">
+            <span class="icon">✉</span>
+            <span class="text">silkevanginneken7@gmail.com</span>
+        </a>
+
+        <a class="contact-line" href="tel:+32470539883">
+            <span class="icon">📞</span>
+            <span class="text">+32 470 53 98 83</span>
+        </a>
+
+        <a class="contact-line" href="https://www.linkedin.com/in/silke-van-ginneken/" target="_blank">
+            <span class="icon">in</span>
+            <span class="text">LinkedIn</span>
+        </a>
+
+        <div class="contact-line">
+            <span class="icon">📍</span>
+            <span class="text">Houthalen</span>
+        </div>
     </section>
 </main>
+
 <footer class="footer">
     <div>Van Ginneken Silke<br>1PROb</div>
     <div>Opdracht curriculum vitae</div>
-    <div><img src="images/knopje.png" alt ="knopje omhoog"/></div>
+    <div><a href="#top" class="scroll-top"><img src="images/knopje.png" alt ="knopje omhoog"/></a></div>
 </footer>
 </body>
 </html>
